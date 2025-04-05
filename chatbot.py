@@ -17,6 +17,8 @@ from prompts import (
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 AZURE_OPENAI_ENDPOINT = st.secrets["AZURE_OPENAI_ENDPOINT"]
 AZURE_OPENAI_API_VERSION = st.secrets["AZURE_OPENAI_API_VERSION"]
+AZURE_OPENAI_API_KEY = st.secrets["AZURE_OPENAI_API_KEY"]
+
 
 def get_system_prompt(additional_instructions: str = "") -> str:
     return f""" 
@@ -73,6 +75,7 @@ def get_llm_models(model: str = "openai", creativity: float = 0.2):
             azure_endpoint=AZURE_OPENAI_ENDPOINT,
             azure_deployment="gpt-4o-orchestrator",
             openai_api_version=AZURE_OPENAI_API_VERSION,
+            api_key=AZURE_OPENAI_API_KEY,
             temperature=creativity,
             max_tokens=200,
         )

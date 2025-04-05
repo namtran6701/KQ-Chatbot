@@ -12,26 +12,43 @@ from prompts import (
     sabor_daily_specials,
 )
 
-system_prompt = f""" 
-You are a professional and helpful virtual assistant responsible for crafting thoughtful, brand-aligned responses to customer reviews for a restaurant. Don't be too lengthy and formal.
+
+def get_system_prompt(additional_instructions: str = "") -> str:
+    return f""" 
+Your name is Rosa Ortega.
+
+You are a professional and helpful virtual assistant responsible for crafting thoughtful, brand-aligned, concise responses to customer reviews for Sabor restaurant. AVOID being lengthy and overly formal. 
 
 You will be provided with:
 - The **customer review**.
-- The restaurant's **brand tone and voice guidelines**.
+- The restaurant's **brand's response guidelines**.
 - Details about the restaurant's **menu**, **location**, **promotional calendar**, **daily specials**, and any other relevant information.
 
 Your task is to:
-1. **Acknowledge and address the customer's feedback** genuinely, whether positive or negative.
-2. **Incorporate the restaurant's brand tone** consistently throughout your response.
-3. Highlight relevant information (e.g., menu items, daily specials, promotional calendar, location-specific details) when appropriate.
-4. Maintain a positive, respectful, and professional demeanor at all times.
-5. Ensure the response feels personal, specific, and human — avoid generic or templated replies.
+1. **Genuinely Acknowledge the Customer's Feedback**  
+   Whether the feedback is positive or negative, respond with sincerity and appreciation. Demonstrate that their voice is heard and valued.
+
+2. **Reflect the Restaurant's Brand Tone**  
+   Ensure your response embodies *Sabor's* distinctive voice — warm, vibrant, and full of flavor. Stay consistent with the brand's personality in every interaction.
+
+3. **Promote Daily Specials and Menu Highlights**  
+   Whenever appropriate, mention *Sabor's* daily specials, upcoming promotions from the calendar, or recommend standout items from the menu to drive engagement and interest.
+
+4. **Maintain a Positive, Respectful, and Professional Demeanor**  
+   Regardless of the tone or content of the feedback, remain courteous, calm, and uplifting in your language.
+
+5. **Make Every Response Feel Personal and Authentic**  
+   Avoid generic templates. Tailor your replies to the individual — reference specific points from their message and respond with warmth and humanity.
+
+IMPORTANT: This is the additional instructions that you MUST follow (if any):
+{additional_instructions}
+
+--------------------------------
+Below are the brand tone, customer response examples, menu, daily specials, promotional calendar, and food allergens for the restaurant:
 
 {brand_tone}
 
 {customer_response_examples}
-
-{location}
 
 {sabor_menu}
 
@@ -41,23 +58,30 @@ Your task is to:
 
 {sabor_food_allergens}
 
-
+{location}
 """
-llm = AzureChatOpenAI(
-    azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
-    azure_deployment="gpt-4o-orchestrator",
-    openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
-    temperature=0.3,
-    max_tokens=200,
-)
-llm_gemini = ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro-exp-03-25",
-    temperature=0,
-    max_tokens=200,
-    timeout=None,
-    max_retries=2,
-    api_key=os.environ["GEMINI_API_KEY"],
-)
+
+
+def get_llm_models(model: str = "openai", creativity: float = 0.2):
+    if model == "openai":
+        llm = AzureChatOpenAI(
+            azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+            azure_deployment="gpt-4o-orchestrator",
+            openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+            temperature=creativity,
+            max_tokens=200,
+        )
+        return llm
+    elif model == "gemini":
+        llm_gemini = ChatGoogleGenerativeAI(
+            model="gemini-2.5-pro-exp-03-25",
+            temperature=creativity,
+            max_tokens=200,
+            timeout=None,
+            max_retries=2,
+            api_key=os.environ["GEMINI_API_KEY"],
+        )
+        return llm_gemini
 
 
 def format_review(review: dict) -> str:
@@ -67,7 +91,12 @@ def format_review(review: dict) -> str:
     return f"Review from {review['name']}{date_prefix} ({review['star_rating']} stars):\n{review['review']}"
 
 
-def get_response(review: str, model="openai") -> str:
+def get_response(
+    review: str,
+    additional_instructions: str = "",
+    model: str = "openai",
+    creativity: float = 0.2,
+) -> str:
     # If review is already a formatted string, use it directly
     if isinstance(review, str):
         review_text = review
@@ -76,21 +105,25 @@ def get_response(review: str, model="openai") -> str:
         review_text = format_review(review)
     else:
         raise ValueError("Review must be either a string or a dictionary")
-    if model == "openai":
-        response = llm.invoke(
-            [SystemMessage(content=system_prompt), HumanMessage(content=review_text)]
-        )
-    else:
-        response = llm_gemini.invoke(
-            [("system", system_prompt), ("human", review_text)]
-        )
+
+    system_prompt = get_system_prompt(additional_instructions)
+
+    llm = get_llm_models(model=model, creativity=creativity)
+    response = llm.invoke(
+        [SystemMessage(content=system_prompt), HumanMessage(content=review_text)]
+    )
     return response.content
 
 
-# Test with a dictionary
-review = {
-    "name": "Lionel Ronaldo",
-    "star_rating": 1,
-    "review": "The Quesabirria tacos were disgusting. The salsa was too spicy and the meat was dry.",
-}
-print(get_response(review))
+# # Test with a dictionary
+# review = {
+#     "name": "Lionel Ronaldo",
+#     "star_rating": 1,
+#     "review": "The Quesabirria tacos were disgusting. The salsa was too spicy and the meat was dry.",
+# }
+# print(get_response(review, model="openai"))
+
+
+# todo: allow different creativity, different model, additional prompt instruction
+# todo: handle cases where the review is empty, only name and star rating is provided
+# todo: validate model's name is correct

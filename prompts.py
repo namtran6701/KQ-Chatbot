@@ -22,18 +22,61 @@ Today's date is {today_date}.
    - Express excitement and eagerness to serve them again.
 
 4. **Handling Different Star Ratings**  
-   - **Positive Reviews (4–5 Stars)**  
-     - Start with a friendly greeting and gratitude.  
-     - Acknowledge any highlights (e.g., specific dishes, service).  
-     - Reaffirm how happy we are that they enjoyed their experience.  
-     - Invite them to visit again soon.
-   - **Reviews With No Comment**  
-     - If 4–5 Stars: Thank them simply and invite them back.  
-     - If 1–3 Stars: Apologize, express regret that we missed the mark, request more details via email, and invite them to return so we can make it right.
-   - **Negative Reviews (1–3 Stars or Specific Complaints)**  
-     - Offer a sincere apology and acknowledge their concerns.  
-     - Encourage them to reach out via our provided email (e.g., rosa@raydalhospitality.com) for further resolution.  
-     - Mention you’d like to offer something special or a second chance to demonstrate the service and flavors we’re known for.
+
+### ⭐ Positive Reviews (4–5 Stars)
+
+#### **With Written Comments**
+- Begin with a warm, friendly greeting and sincere thanks.
+- Mention the reviewer by name for personalization.
+- Acknowledge any highlights they mention (e.g., food, service, ambiance).
+- Reaffirm how happy you are that they had a great experience.
+- Encourage them to visit again soon.
+- When appropriate, let them know about **new menu items**, **daily specials**, or the **promotional calendar**.
+
+#### **Without Comments**
+- Thank them simply but sincerely.
+- Mention their name.
+- Invite them back warmly.
+- If appropriate, mention **daily specials** or a **new menu item**.
+
+---
+
+### 😐 Neutral Reviews (2–3 Stars)
+
+#### **Without Comments**
+- Thank them for visiting and acknowledge their rating.
+- Express regret that the experience didn’t fully meet expectations.
+- Invite them to share more details via email: **rosa@raydalhospitality.com**.
+- Encourage them to return so you can improve their experience.
+- When fitting, mention **new menu offerings**, **daily specials**, or relevant promotions.
+
+#### **With Comments or Mild Complaints**
+- Begin with a courteous thank-you and an apology for the specific issues raised.
+- Acknowledge their concerns with empathy and respect.
+- Encourage them to contact you via **rosa@raydalhospitality.com** for more details or follow-up.
+- Let them know you’d love the opportunity to make things right on their next visit.
+- Recommend trying something new or exciting from the menu, or mention **promotional items** that may better suit their preferences.
+
+---
+
+### 🚩 Negative Reviews (1 Star or Strong Complaints)
+
+#### **With or Without Comments**
+- Start with a sincere apology and directly acknowledge the guest’s dissatisfaction.
+- Show empathy and a desire to understand what went wrong.
+- Encourage them to reach out directly at **rosa@raydalhospitality.com** so you can personally follow up and address their concerns.
+- Let them know you’re committed to making things right and regaining their trust.
+- Where appropriate, mention you'd love for them to try something different next time — such as **new dishes**, **daily specials**, or something from the **promotional calendar** — as part of a second chance to offer a better experience.
+
+---
+
+## 🔁 Consistent Call to Action
+
+When requesting feedback or offering a chance to reconnect, **always**:
+- Use the contact email **rosa@raydalhospitality.com**
+- Tailor your message tone based on the star rating (enthusiastic vs. apologetic)
+- Mention your interest in making things right or providing an even better next visit
+- Encourage trying new items or visiting during specials or promotions **when appropriate**
 
 5. **Email Contact**  
    - For negative experiences or significant concerns, provide the email address (e.g., rosa@raydalhospitality.com) so customers can contact us directly.
@@ -51,8 +94,27 @@ Today's date is {today_date}.
 """
 
 customer_response_examples = """
+
 Here are some examples and owner's response to 5 star reviews:
 <------------ 5 star reviews ------------>  
+
+### **Tone**
+- **Warm, enthusiastic, and appreciative**.
+- Language is celebratory and affirming (e.g., "Wow," "so happy to hear," "can't wait to welcome you back").
+
+### **Structure & Content**
+- **Affirms the positive experience**: Highlights and reinforces what the guest enjoyed.
+- **Personalization**: Mentions guest names and specific phrases from their review.
+- **Reinforces brand values**: Emphasizes care, hospitality, and service goals.
+- **No corrective action needed** since the experience was already positive.
+
+### **Call to Action**
+- Often **implicit**, encouraging return visits (e.g., “We can’t wait to welcome you back”).
+
+### **Example Elements**
+> "We’re so happy to hear that you felt like a priority... that’s exactly the experience we strive to create."
+
+** EXAMPLES **
 ### Review 1
 - **User**: Devon Henry  
 - **Star Rating**: 5 Stars  
@@ -84,6 +146,24 @@ Here are some examples and owner's response to 5 star reviews:
 
 Here are some examples and owner's response to 2-3 star reviews:
 <------------ 2-3 star reviews ------------>
+### **Tone**
+- **Polite but inquisitive and slightly apologetic**.
+- Acknowledges neutrality or mild dissatisfaction without assuming negative intent.
+- Encouraging and open.
+
+### **Structure & Content**
+- **Acknowledges the rating**, even when no text is provided.
+- **Seeks feedback or clarification**: Asks guests to elaborate on what could have been better.
+- **Reinforces desire to improve**: Phrases like “we’re always aiming for taco perfection” signal a continuous improvement mindset.
+
+### **Call to Action**
+- **Explicit**: Requests for specific feedback or invitations to contact via email.
+- **Gently prompts re-engagement** to convert neutral reviewers into loyal customers.
+
+### **Example Elements**
+> "If there is anything specific you can think of that we can do to earn those last two stars, please let us know!"
+
+** EXAMPLES **
 ### Review 1
 - **User**: Bobby Hoskins Jr  
 - **Star Rating**: 2 Stars  
@@ -117,10 +197,24 @@ Here are some examples and owner's response to 2-3 star reviews:
 
 Here are some examples and owner's response to 1 star reviews:
 <------------ 1 star reviews ------------>
-Here is the extracted information from the new screenshot as plain text:
+### **Tone**
+- **Sincerely apologetic, empathetic, and detailed**.
+- Balances humility with a proactive tone.
+- Takes full responsibility for the shortcomings.
 
----
+### **Structure & Content**
+- **Acknowledges the specific complaint**: Directly refers to the dish or experience the customer mentioned.
+- **Validates the guest’s disappointment**: "We completely understand your frustration."
+- **Describes a commitment to betterment**: Emphasizes learning from feedback and making things right.
 
+### **Call to Action**
+- **Very strong and personalized**: Clear invitation to contact management (with email) to further resolve the issue.
+- Emphasizes **intent to rectify** the situation.
+
+### **Example Elements**
+> "Please email us... so we can address your concerns personally... We sincerely hope you’ll give us another chance."
+
+** EXAMPLES **
 ### Review 1
 - **User**: Elizabeth Mendieta  
 - **Star Rating**: 2 Stars  
@@ -283,99 +377,276 @@ Rice and beans not included
 <------------ End of restaurant menu ------------>
 """
 
-promotional_calendar = """
-Here is the promotional calendar for the restaurant:
+sabor_promotional_calendar = """
+Here is the promotional calendar for the Sabor Latin Street Grill restaurant:
 
-<------------ promotional calendar ------------>
+<------------ Sabor Latin Street Grill promotional calendar ------------>
 
-## 🌮 **Three Amigos Promotional Calendar**
+**Upcoming Restaurant Promotions: April - June 2025**
 
-### **January - "New Year, New Flavors"**
-- **Promo**: "Enchiladas Fiesta" – 15% off all enchiladas.
-- **Event**: *Three Kings Day* special with complimentary *Rosca de Reyes* slice (Jan 6).
-- **Social Theme**: Showcase regional Mexican traditions and comfort dishes for the cold season.
+Get ready for some exciting deals and specials at our restaurant over the next few months! Here's a breakdown of our promotional calendar:
 
----
-
-### **February - "Amigos y Amor"**
-- **Promo**: Couple's Combo – Shared Dip Trio, 2 Platos Tradicionales, and dessert for $35.
-- **Event**: *Valentine’s Day Dinner* with live music and a complimentary appetizer.
-- **Special Feature**: Spotlight on *Mole* dishes (Enchiladas Poblanas, Pollo en Mole).
-
----
-
-### **March - "Taste of Spring"**
-- **Promo**: Fresh Guacamole & Queso Fundido special – Free small guac with any fajitas.
-- **Event**: *National Tortilla Chip Day* (March 23) – Free chips & salsa with any order.
-- **Social Theme**: Lighter dishes, fish tacos, and shrimp specials.
-
----
-
-### **April - "Cantina Season Kickoff"**
-- **Promo**: "Taco Tour" – Mix & match 3 tacos + drink for $15.
-- **Event**: *Spring Patio Opening Party* with live mariachi and happy hour deals.
-- **Highlight**: Authentic *Tacos Auténticos* and *Quesabirria*.
-
----
-
-### **May - "Cinco de Mayo Festival"**
-- **Promo**: Full-week celebration with discounts on *Margaritas*, *Nachos Supreme*, and *Fajitas*.
-- **Event**: Live bands, giveaways, and street food stalls.
-- **Social Theme**: Vibrant, festive, and family-friendly.
-
----
-
-### **June - "Summer Sizzlers"**
-- **Promo**: Fajitas Month – 10% off all *Fajitas*.
-- **Event**: *Father’s Day* Grill Special – Complimentary appetizer for dads.
-- **Special Feature**: Launch seasonal drinks like *Agua Frescas* and *Frozen Margaritas*.
-
----
-
-### **July - "Mexican Summer Nights"**
-- **Promo**: $5 *A La Carte Tacos* all month.
-- **Event**: *Patio Fiesta Fridays* with DJ, dance floor, and happy hour.
-- **Social Theme**: Street food vibes, light bites, and refreshing drinks.
-
----
-
-### **August - "Back to School, Back to Amigos"**
-- **Promo**: Family Special – Free kid’s meal with purchase of 2 adult entrees.
-- **Event**: *End of Summer Fiesta* with taco-eating contest.
-- **Highlight**: Promote family-friendly dishes like *Tostadas* and *Quesadillas*.
-
----
-
-### **September - "Viva Mexico!"**
-- **Promo**: 2-for-1 Tacos on *Mexican Independence Day* (Sept 16).
-- **Event**: Full weekend celebration with traditional dishes and performances.
-- **Menu Focus**: Highlight regional dishes (*Tinga de Pollo*, *Chiles en Nogada* if available).
-
----
-
-### **October - "Fall Flavors & Día de los Muertos"**
-- **Promo**: Special *Mole Festival* – Try all dishes with mole sauce at a discount.
-- **Event**: *Día de los Muertos* (Nov 1–2) – Decor, altars, and themed menu.
-- **Social Theme**: Storytelling, traditions, and warm comforting dishes.
-
----
-
-### **November - "Gracias, Amigos"**
-- **Promo**: *Friendsgiving Fiesta* – Shared platters for groups at special prices.
-- **Event**: *Thanksgiving Weekend* - Give thanks with special *Pollo Asado* and *Carnes* platters.
-- **Community**: Collaborate with local food banks or run a canned food drive.
-
----
-
-### **December - "Holiday Fiesta"**
-- **Promo**: *Tamales* and *Ponche* holiday specials.
-- **Event**: *Las Posadas* (Dec 16-24) – Traditional Mexican Christmas celebration.
-- **Menu Feature**: Warm drinks, sweet plantains, and festive dishes.
-
----
-
+*   **April 9th - April 10th, 2025:** Loyalty Customers, enjoy a special treat! Get our delicious Cheese Quesadillas for just $4.49. (Available to Loyalty Customers only)
+*   **April 18th - April 20th, 2025:** Planning a family meal? Our Email Subscribers will receive $5 off our Family Meal Boxes. (Available to Email Subscribers)
+*   **April 27th, 2025:** We're reaching out with information about our great Value Meals specifically for customers we haven't seen in a while. (Targeting 3 Months Lapsed Customers)
+*   **Around May 5th, 2025 (Preorder Dates TBD):** Celebrate Cinco de Mayo with us! We'll be offering PreOrder Packs perfect for your fiesta. Keep an eye out for the exact preorder dates! (Available to Everyone)
+*   **May 7th - May 11th, 2025:** Give the gift of great food! Get $5 off when you purchase $25 worth of Gift Cards. (Available to Everyone)
+*   **May 12th - May 18th, 2025:** Loyalty members, earn rewards faster! Get 100 bonus points with any purchase you make during this week. (Available to Loyalty Customers only)
+*   **May 19th - May 25th, 2025:** We miss you! Customers who haven't visited in 3 months can enjoy a Buy One, Get One (BOGO) deal on our popular Quesabirria Value Meals. (Available to 3 Months Lapsed Customers)
+*   **May 28th - June 1st, 2025:** Another perk for our loyal fans! Take $2 off any Value Meal purchase. (Available to Loyalty Customers only)
 <------------ End of promotional calendar ------------>
 """
 
+sabor_food_allergens = """
+Here is the food allergens for the Sabor Latin Street Grill restaurant:
+
+<------------ Sabor Latin Street Grill food allergens ------------>
+
+**Sabor Latin Street Grill Allergen Information**
+
+*Please note: This information is based on the provided chart (ID 202409). The chart indicates the restaurant aims to be Fish, Peanut, and Tree Nut free, however, Shellfish is present in some items. Always inform the staff of any allergies when ordering, as Sabor cannot guarantee the complete absence of allergens.*
+
+**Street Food:**
+*   **Arepa Tradicional:** Contains Eggs, Soybean, and Dairy.
+*   **Gordita:** Contains Soybean and Dairy.
+*   **Carne Asada Fries:** Contains Wheat, Soybean, and Dairy.
+*   **Empanada:** Contains Wheat, Eggs, Soybean, and Dairy.
+*   **Elote Loco:** Contains Eggs, Soybean, and Dairy.
+*   **Quesabirria:** Contains Soybean and Dairy.
+
+**Burrito:**
+*   **Three Amigos Burrito:** Contains Wheat, Soybean, and Dairy.
+*   **Sabor Especial Burrito:** Contains Wheat, Soybean, and Dairy.
+*   **BYO Burrito:** Contains Wheat and Soybean (Dairy may be added depending on choices).
+
+**Tacos:**
+*   **Americano Tacos:** Contains Wheat, Soybean, and Dairy.
+*   **Autentico Tacos:** Contains Soybean.
+*   **Locos Tacos:** Contains Soybean.
+*   **BYO Tacos:** Contains Soybean.
+*   **Chimi Shrimp Tacos:** Contains Wheat, Soybean, Shellfish, and Dairy.
+
+**Bowls:**
+*   **BYO Bowl:** Does not contain listed allergens (Wheat, Eggs, Soybean, Fish, Shellfish, Dairy) based on the chart, though additions may change this.
+*   **Soup:** Contains Soybean and Dairy.
+*   **Taco Salad:** Contains Wheat, Soybean, and Dairy.
+*   **Cuban Bowl:** Contains Soybean and Dairy.
+
+**Quesadillas / Nachos:**
+*   **Quesadillas:** Contains Wheat, Soybean, and Dairy.
+*   **Sabor Nachos:** Contains Soybean and Dairy.
+
+**Kids Menu:**
+*   **Taco Americano (No Protein):** Contains Wheat, Soybean, and Dairy.
+*   **Quesadilla (No Protein):** Contains Wheat, Soybean, and Dairy.
+*   **Chicken Tenders:** Contains Wheat and Soybean.
+
+**Desserts:**
+*   **Churros:** Contains Wheat, Eggs, Soybean, and Dairy.
+*   **Guava Empanadas:** Contains Wheat, Soybean, and Dairy.
+*   **Vanilla Ice Cream:** Contains Soybean and Dairy.
+
+**Sides:**
+*   **Platanos Maduros:** Contains Soybean and Dairy.
+*   **Yuca Fries:** Contains Eggs and Soybean.
+*   **French Fries:** Contains Soybean.
+*   **Refried Beans:** Contains Soybean.
+*   **Black Beans:** Contains Soybean.
+*   **Guacamole:** Does not contain listed allergens.
+*   **Pico de Gallo:** Does not contain listed allergens.
+*   **Quinoa Brown Rice:** Contains Soybean.
+*   **Mexican Rice:** Contains Soybean.
+*   **Queso:** Contains Dairy.
+*   **Chips:** Contains Soybean.
+*   **Chimichurri:** Contains Soybean.
+
+**Proteins:**
+*   **Shredded Chicken:** Does not contain listed allergens.
+*   **Ground Beef:** Contains Wheat and Dairy.
+*   **Grilled Steak:** Contains Wheat and Soybean.
+*   **Grilled Chicken:** Contains Soybean.
+*   **Barbacoa:** Contains Soybean.
+*   **Al Pastor Pork:** Contains Soybean.
+*   **Chorizo Sausage:** Contains Soybean.
+*   **Grilled Shrimp:** Contains Soybean and Shellfish.
+*   **Vegan Chorizo:** Contains Soybean.
+*   **Grilled Veggies:** Contains Soybean.
+
+**Salsas:**
+*   **Mild Salsa:** Does not contain listed allergens.
+*   **Arbol Salsa:** Contains Soybean.
+*   **Verde Salsa:** Does not contain listed allergens.
+*   **Green Monster Salsa:** Contains Soybean.
+*   **Pineapple Habanero Salsa:** Does not contain listed allergens.
+*   **Charred Habanero Salsa:** Contains Soybean.
+
+**Disclaimer:** This allergen information is provided as a guide based on the chart. Sabor cannot guarantee the complete absence of these allergens in their restaurants due to shared cooking and preparation areas. Always inform the restaurant of your allergies.
+
+<------------ End of Sabor Latin Street Grill food allergens ------------>
+"""
+
+sabor_daily_specials = """
+Here is the daily specials for the Sabor Latin Street Grill restaurant:
+
+<------------ Sabor Latin Street Grill daily specials ------------>
+**Spice Up Your Week with Our Daily Specials!**
+
+*   **Monday:** Beat the Monday blues with our hearty Three Amigos Burrito, served with a drink, for only $8.99! Pair it perfectly with refreshing $3 Mexican Beers.
+*   **Tuesday:** Join us for Taco Tuesday! Feast on our authentic Tacos Autenticos at the amazing price of $1.49 each.
+*   **Wednesday:** Bring the family! On Wednesdays, Kids Meals are just $0.99 when you purchase an adult meal (one discounted kids meal per adult meal).
+*   **Thursday:** Get a taste of tradition! Enjoy our featured Arepa or Empanada special for $8.49. Thirsty? Sip on vibrant $6 Mojitos all day!
+*   **Friday:** Cheers to Friday! Relax and unwind with cool, crisp $5 Craft Beers to start your weekend right.
+*   **Saturday:** It's fiesta time! Enjoy our classic, tangy Margaritas for just $6 all day long.
+*   **Sunday:** Sunday Funday, made easy! Take $5 Off our delicious and convenient Family Meal Boxes – perfect for sharing.
+
+<------------ End of Sabor Latin Street Grill daily specials ------------>
+"""
+
+sabor_menu = """
+Here is the menu for the Sabor Latin Street Grill restaurant:
+
+<------------ Sabor Latin Street Grill menu ------------>
+**Welcome to Sabor! Experience the Vibrant Flavors of Authentic Street Food & Mexican Favorites!**
+
+Get ready for a culinary journey with our carefully crafted dishes, made with fresh ingredients and traditional recipes. From handheld delights to hearty bowls, there's something for everyone.
+
+**Street Food Sensations:**
+
+*   **Empanada ($4.99):** A golden-fried pocket of perfection! Choose your filling from savory Ground Beef, Shredded Chicken, Chorizo, Barbacoa, Grilled Veggies, or Black Bean, all nestled with cheese inside. Also available in a sweet Guava Pineapple version! Served with our signature Rosada sauce. *(Must Try!)*
+*   **Quesabirria ($9.99):** Two delicious Birria Tacos loaded with cheese and served with a rich Chili Dipping Sauce for the ultimate flavor dunk! (G)
+*   **Arepa ($6.49):** A classic Venezuelan delight! A warm, tender stuffed corn cake filled with cheese, your choice of protein, and drizzled with Rosada sauce.
+*   **Carne Asada Fries ($10.99):** Indulge in crispy fries piled high with juicy Steak, melted Queso, fresh Pico de Gallo, creamy Guac, Cotija cheese, and a dollop of Sour Cream. *(Must Try!)*
+*   **Elote Loco ($4.99):** Grilled corn on the cob slathered in creamy Mayo, tangy Cotija cheese, and a sprinkle of Chili Powder. A true street food classic! (V, G)
+*   **Platanos Maduros ($4.99):** Sweet, fried plantains perfectly caramelized, topped with fresh Cilantro, Cotija cheese, and served with a side of cool Sour Cream. (V, G)
+*   **Gordita ($6.99):** A satisfying stuffed corn cake packed with crisp Lettuce, juicy Tomato, Cotija cheese, Sour Cream, and your choice of Beans & Protein.
+
+**Authentic Tacos:**
+
+*   **Taco Autentico ($2.99):** Simple, traditional, and delicious! Your choice of protein on a warm Corn Tortilla, topped with fresh Cilantro, Onion, and a squeeze of Lime. *(Must Try!)*
+*   **Taco Americano ($3.49):** A familiar favorite! Your choice of protein on a soft Flour Tortilla with crisp Lettuce, Tomato, and shredded Cheese.
+*   **Chimi Shrimp Taco ($3.99):** Grilled Shrimp on a Flour Tortilla, topped with Lettuce, Tomato, Cotija cheese, Cilantro, and our zesty Chimichurri sauce.
+
+**Hearty Bowls & Burritos:**
+
+*   **Taco Salad ($10.49):** A crispy fried tortilla bowl filled with Mixed Greens, Pico de Gallo, Queso, Cotija cheese, Sour Cream, and your choice of Rice, Beans & Protein. (V, D options available)
+*   **Cuban Bowl ($10.99):** A taste of the islands! Tender Barbacoa and Shredded Chicken served over Mexican Rice and Quinoa-Brown Rice blend, with Black Beans, Lime, sweet Fried Plantains, and Cilantro. (G) *(Must Try!)*
+*   **Sabor Salad ($8.99):** A lighter, vibrant mix of Greens, Lettuce, Black Beans, Corn, Tomato, Onion, creamy Avocado, Chimichurri dressing, and crispy Tortilla Strips. Add your favorite protein! (V, G, D options available)
+*   **Sabor Especial Burrito ($10.99):** A flavor-packed burrito stuffed with Queso, Lettuce, Sour Cream, Pico de Gallo, Guac, and your choice of Rice, Beans & Protein.
+*   **Three Amigos Burrito ($8.99):** Your choice of Queso, Rice, Beans & Protein wrapped tightly in a warm tortilla. Simple and satisfying.
+*   **Chicken Fajita Soup (S $3.99 / L $5.99):** A comforting soup with Grilled Chicken, Tomato, Onion, Pepper, Corn, crispy Tortilla Strips, and fresh Cilantro. (G)
+
+**Nachos & Quesadillas:**
+
+*   **Sabor Nachos ($10.99):** Crispy tortilla chips loaded with Queso, Lettuce, Sour Cream, Pico de Gallo, Guac, Cotija cheese, and your choice of Beans & Protein. Perfect for sharing!
+*   **Sabor Quesadilla ($6.49):** A warm, folded tortilla filled with melted cheese. Add your favorite protein upon request! (V)
+
+**--- MAKE IT YOUR WAY! ---**
+
+Customize your perfect meal!
+
+*   **Tacos ($3.49 each):** Choose your Tortilla, Protein, and load it up with your favorite Toppings: Tomato, Onion, Cheese, Cilantro, Lettuce, Pineapple, Jalapeno, Spicy Rosada, Chimichurri.
+*   **Burritos & Bowls ($9.99):** Start with Rice & Beans, add your Protein, and finish with Desired Toppings: Tomato, Onion, Cheese, Cilantro, Lettuce, Corn off the cob, Queso, Pineapple, Jalapeno.
+*   **Nachos ($9.99):** Choose your Beans & Protein, then pile on the Desired Toppings: Tomato, Onion, Cheese, Cilantro, Lettuce, Corn off the cob, Queso, Pineapple, Jalapeno.
+
+**Choose Your Protein:**
+*(Extra Charge for Premium Proteins)*
+
+*   Chorizo Sausage (G, D)
+*   Vegan Chorizo (V, G, D)
+*   Grilled Veggies (V, G, D)
+*   Black Beans (V, G, D)
+*   Ground Beef (D)
+*   Shredded Chicken (G)
+*   Grilled Chicken (G, D)
+*   Al Pastor Pork (G, D)
+*   Barbacoa (G, D)
+*   **Premium:** Grilled Steak (D)
+*   **Premium:** Grilled Shrimp w/ Onions & Tomatoes (G, D)
+
+**(V) = Vegetarian | (G) = Gluten Friendly | (D) = Dairy Free**
+
+*We strive to provide accurate dietary information, but please inform your server of any allergies or dietary restrictions.*
 
 
+**Value Meals - A Complete & Delicious Deal!**
+
+*   **Empanada Meal:** Choose your favorite empanada filling, served as a complete meal with crispy tortilla chips, your choice of a side, and a refreshing drink. **$8.99**
+*   **Quesabirria Meal:** Indulge in two savory Birria Tacos, packed with tender meat and cheese, served alongside their rich chili dipping sauce (consommé), chips, and a drink. A trendy favorite! **$11.99**
+*   **Chicken Fajita Soup Meal:** Warm up with a generous large bowl of our hearty Chicken Fajita Soup, accompanied by chips, your choice of side, and a drink. Comfort in a bowl! **$10.99**
+
+**Signature Cocktails - Sip & Unwind!**
+
+*   **Mucho Sabor Margarita:** Our premium margarita featuring top-shelf Patron Tequila, Grand Marnier, and fresh lime. The ultimate indulgence! **$11.99**
+*   **Sabor Margarita:** A classic blend of smooth 1800 Tequila, Grand Marnier, and zesty lime. Perfectly balanced. **$9.99**
+*   **Amigos Margarita:** Our delightful house margarita with Tequila, Triple Sec, and lime. Simple, refreshing, and always a good choice. **$6.99**
+*   **Cuban Mojito:** Transport yourself to the tropics with this invigorating mix of House Rum, fresh mint, lime, and a splash of lemon-lime soda. **$6.99**
+*   **Paloma:** A bubbly and bright favorite featuring House Tequila, lime, and refreshing grapefruit soda. **$6.99**
+
+**Sides - Perfect Additions to Any Meal!**
+
+*(Note: Large (L) & Extra Large (XL) Guacamole, Queso, and Pico de Gallo automatically come with chips!)*
+
+*   **Guacamole (V,G,D):** Freshly made, creamy avocado dip.
+    *   S: $2.99 | L: $5.49 | XL: $10.49
+*   **Queso (V,G):** Warm, melty cheese dip, perfect for dipping.
+    *   S: $2.99 | L: $5.49 | XL: $10.49
+*   **Pico de Gallo (V,G,D):** A vibrant mix of fresh diced tomatoes, onions, cilantro, and lime.
+    *   S: $1.79 | L: $3.29 | XL: $6.29
+*   **Sour Cream (V,G):** Cool and creamy topping.
+    *   S: $1.29 | L: $2.29 | XL: $4.49
+*   **Rice: Mexican / Quinoa-Brown (V,G,D):** Choose our seasoned Mexican rice or hearty Quinoa-Brown rice blend.
+    *   S: $1.69 | L: $2.79 | XL: $5.29
+*   **Beans: Refried / Black (V,G,D):** Your choice of classic creamy refried beans or whole black beans.
+    *   S: $1.69 | L: $2.79 | XL: $5.29
+*   **Yuca Fries (V,G,D):** Crispy fried yuca root – a delicious alternative to potato fries.
+    *   L: $3.79
+*   **Fries (V,G,D):** Classic crispy French fries.
+    *   L: $3.79
+*   **Chips (V,G,D):** Crunchy house-made tortilla chips.
+    *   L: $1.79
+
+*(V = Vegetarian, G = Gluten-Friendly, D = Dairy-Free - Please inform staff of any allergies)*
+
+**Kids Meals - Little Amigos Favorites! $5.29**
+
+*Perfectly portioned for smaller appetites. Includes choice of 1 Entree, 1 Side, and a Fountain Drink.*
+*   **Entree Choices:** Kids Taco, Kids Chicken Tenders, Kids Quesadilla
+*   **Side Choices:** Chips & Queso, Rice & Beans, 1/2 Corn on the Cob, Kids Fries
+
+**Desserts - Sweet Endings!**
+
+*   **Guava Pineapple Empanada (V):** A warm, flaky pastry filled with sweet guava and pineapple, dusted with cinnamon sugar, and served with a side of sour cream and lime. A tropical delight! **$4.99**
+*   **Ice Cream (V,G):** Simple and sweet classic vanilla ice cream. **$1.99**
+*   **Churros (V):** Warm, crispy churros coated in cinnamon sugar with a delicious caramel filling. **$4.99**
+
+**Family Boxes - Share the Flavor! $43 (Feeds 4-6 People)**
+
+*Perfect for gatherings, parties, or easy family dinners!*
+
+*   **Taco Box:** Everything you need to build your own tacos!
+    *   12 Flour or Corn Tortillas
+    *   Tortilla Chips
+    *   Queso, Guac, *or* Pico de Gallo
+    *   Choice of 3 Proteins
+    *   Choice of Refried *or* Black Beans
+    *   Choice of Mexican *or* Quinoa Rice
+    *   Choice of Salsa
+*   **Nacho Box:** Build the ultimate nacho platter!
+    *   Tortilla Chips
+    *   Queso, Guac, Pico de Gallo & Sour Cream
+    *   Choice of 3 Proteins
+    *   Choice of Refried *or* Black Beans
+    *   Choice of Salsa
+
+**Unlimited Salsa Bar! - Find Your Perfect Heat!**
+
+Explore our amazing selection of house-made salsas to complement your meal. From mild to fiery, discover your favorite!
+
+*   **Mild:** Gentle flavor, minimal heat.
+*   **Verde (🌶️):** Tangy tomatillo-based salsa with a mild kick.
+*   **Arbol (🌶️🌶️):** Smoky heat from arbol chilies.
+*   **Pineapple Habanero (🌶️🌶️🌶️):** Sweet and spicy tropical fusion.
+*   **Green Monster (🌶️🌶️🌶️):** A unique blend with intense flavor and heat.
+*   **Charred Habanero (🌶️🌶️🌶️🌶️):** Deep, smoky flavor with a serious habanero punch!
+<------------ End of Sabor Latin Street Grill menu ------------>
+"""

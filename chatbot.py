@@ -2,6 +2,7 @@ from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
+import streamlit as st
 from prompts import (
     brand_tone,
     customer_response_examples,
@@ -12,6 +13,10 @@ from prompts import (
     sabor_daily_specials,
 )
 
+#SECRETS FOR STREAMLIT
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+AZURE_OPENAI_ENDPOINT = st.secrets["AZURE_OPENAI_ENDPOINT"]
+AZURE_OPENAI_API_VERSION = st.secrets["AZURE_OPENAI_API_VERSION"]
 
 def get_system_prompt(additional_instructions: str = "") -> str:
     return f""" 
@@ -65,9 +70,9 @@ Below are the brand tone, customer response examples, menu, daily specials, prom
 def get_llm_models(model: str = "openai", creativity: float = 0.2):
     if model == "openai":
         llm = AzureChatOpenAI(
-            azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+            azure_endpoint=AZURE_OPENAI_ENDPOINT,
             azure_deployment="gpt-4o-orchestrator",
-            openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+            openai_api_version=AZURE_OPENAI_API_VERSION,
             temperature=creativity,
             max_tokens=200,
         )
@@ -79,7 +84,7 @@ def get_llm_models(model: str = "openai", creativity: float = 0.2):
             max_tokens=200,
             timeout=None,
             max_retries=2,
-            api_key=os.environ["GEMINI_API_KEY"],
+            api_key=GEMINI_API_KEY,
         )
         return llm_gemini
 

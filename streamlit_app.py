@@ -37,6 +37,11 @@ with col1:
         creativity = st.slider(
             "Response Creativity", min_value=0.0, max_value=1.0, value=0.2, step=0.05
         )
+        model = st.selectbox(
+            "Response Model",
+            options=["openai", "gemini"],
+            index=0,
+        )
     
     if st.button("Generate Response", type="primary"):
         # Check for name first
@@ -68,7 +73,7 @@ with col1:
             response = get_response(
                 format_review(review_dict),
                 additional_instructions=additional_instructions,
-                model="openai",
+                model=model,
                 creativity=creativity,
             )
 

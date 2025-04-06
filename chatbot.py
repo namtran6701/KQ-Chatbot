@@ -13,18 +13,28 @@ from prompts import (
     sabor_daily_specials,
 )
 
-#SECRETS FOR STREAMLIT
+# SECRETS FOR STREAMLIT
 GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 AZURE_OPENAI_ENDPOINT = st.secrets["AZURE_OPENAI_ENDPOINT"]
 AZURE_OPENAI_API_VERSION = st.secrets["AZURE_OPENAI_API_VERSION"]
 AZURE_OPENAI_API_KEY = st.secrets["AZURE_OPENAI_API_KEY"]
+
+# local secrets
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+# AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
+# AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 
 
 def get_system_prompt(additional_instructions: str = "") -> str:
     return f""" 
 Your name is Rosa Ortega.
 
-You are a professional and helpful virtual assistant responsible for crafting thoughtful, brand-aligned, concise responses to customer reviews for Sabor restaurant. AVOID being lengthy and overly formal. 
+You are a professional and helpful virtual assistant responsible for crafting thoughtful, brand-aligned, concise responses to customer reviews for Sabor restaurant. 
+Be concise and to the point. Maximum 100-110 words. AVOID EXCEED THIS LIMIT.
+
+if the review is in spanish, respond in spanish. However, if only the customer's name is in spanish, but the review is in english, YOU MUST respond in english.
+
 
 You will be provided with:
 - The **customer review**.
@@ -84,19 +94,23 @@ def get_llm_models(model: str = "openai", creativity: float = 0.2):
         llm_gemini = ChatGoogleGenerativeAI(
             model="gemini-2.5-pro-exp-03-25",
             temperature=creativity,
-            max_tokens=200,
             timeout=None,
             max_retries=2,
+            max_tokens=None,  # reasoning model, shouldn't set a max tokens
             api_key=GEMINI_API_KEY,
         )
         return llm_gemini
 
 
 def format_review(review: dict) -> str:
-    """Convert a review dictionary into a formatted text string."""
-    date_str = review.get("date", "")  # Get date if it exists, otherwise empty string
-    date_prefix = f" on {date_str}" if date_str else ""
-    return f"Review from {review['name']}{date_prefix} ({review['star_rating']} stars):\n{review['review']}"
+    """Convert a review dictionary into a formatted text string with clear sections for each piece of information."""
+    date_str = review.get("date", "Not specified")  # Get date if it exists, otherwise indicate it's not specified
+    return (
+        f"Customer Name: {review['name']}\n"
+        f"Date: {date_str}\n"
+        f"Rating: {review['star_rating']} stars\n"
+        f"Review:\n{review['review']}"
+    )
 
 
 def get_response(
@@ -117,21 +131,35 @@ def get_response(
     system_prompt = get_system_prompt(additional_instructions)
 
     llm = get_llm_models(model=model, creativity=creativity)
-    response = llm.invoke(
-        [SystemMessage(content=system_prompt), HumanMessage(content=review_text)]
-    )
+    if model == "openai":
+        response = llm.invoke(
+            [SystemMessage(content=system_prompt), HumanMessage(content=review_text)]
+        )
+    elif model == "gemini":
+        response = llm.invoke(
+            [
+                (
+                    "system",
+                    system_prompt,
+                ),
+                (
+                    "human",
+                    review_text,
+                ),
+            ]
+        )
     return response.content
 
 
-# # Test with a dictionary
+# Test with a dictionary
 # review = {
 #     "name": "Lionel Ronaldo",
 #     "star_rating": 1,
 #     "review": "The Quesabirria tacos were disgusting. The salsa was too spicy and the meat was dry.",
 # }
-# print(get_response(review, model="openai"))
+# print(get_response(review, model="gemini"))
 
 
-# todo: allow different creativity, different model, additional prompt instruction
+
 # todo: handle cases where the review is empty, only name and star rating is provided
 # todo: validate model's name is correct

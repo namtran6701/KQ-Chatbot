@@ -28,7 +28,7 @@ AZURE_OPENAI_API_KEY = st.secrets["AZURE_OPENAI_API_KEY"]
 
 def get_system_prompt(additional_instructions: str = "") -> str:
     return f""" 
-Your name is Rosa Ortega.
+Your name is Sabor Management Team.
 
 You are a professional and helpful virtual assistant responsible for crafting thoughtful, brand-aligned, concise responses to customer reviews for Sabor restaurant. 
 Be concise and to the point. Maximum 100-110 words. AVOID EXCEED THIS LIMIT.

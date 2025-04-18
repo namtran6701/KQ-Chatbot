@@ -5,6 +5,9 @@ from datetime import datetime
 # --- Password Setup ---
 PASSWORD = st.secrets["PASSWORD"]
 
+# For testing purposes, use a hardcoded password
+# PASSWORD = "test"
+
 # --- Session State Initialization ---
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
@@ -61,11 +64,11 @@ def main_app():
                 height=80,
             )
             creativity = st.slider(
-                "Response Creativity", min_value=0.0, max_value=1.0, value=0.2, step=0.05
+                "Response Creativity", min_value=0.0, max_value=1.0, value=0.4, step=0.05
             )
             model = st.selectbox(
                 "Response Model",
-                options=["openai", "gemini"],
+                options=["gemini", "openai"],
                 index=0,
             )
         

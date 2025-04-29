@@ -3,7 +3,6 @@ today_date = datetime.now().strftime("%Y-%m-%d")
 
 date_of_the_week = datetime.now().strftime("%A")
 
-#TODO: change to date of response, default to today's date
 
 brand_tone = f"""
 Here is brand tone that you should follow when responding to customer reviews:
@@ -327,11 +326,11 @@ Rice and beans not included
 <------------ End of restaurant menu ------------>
 """
 
-sabor_promotional_calendar = """
+sabor_promotional_calendar = f"""
 Here is the promotional calendar for the Sabor Latin Street Grill restaurant:
-
+Today's date is {today_date}
+NEVER suggest a prompt that is not related to the promotional calendar and past promotions. Check today's date and the promotional calendar to suggest the correct promotions.
 <------------ Sabor Latin Street Grill promotional calendar ------------>
-
 **Upcoming Restaurant Promotions: April - June 2025**
 
 Get ready for some exciting deals and specials at our restaurant over the next few months! Here's a breakdown of our promotional calendar:
@@ -436,8 +435,7 @@ Here is the food allergens for the Sabor Latin Street Grill restaurant:
 """
 
 sabor_daily_specials = """
-Here is the daily specials for the Sabor Latin Street Grill restaurant:
-
+Here is the daily specials for the Sabor Latin Street Grill restaurant.
 <------------ Sabor Latin Street Grill daily specials ------------>
 **Spice Up Your Week with Our Daily Specials!**
 

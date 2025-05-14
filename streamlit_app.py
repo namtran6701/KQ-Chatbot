@@ -68,7 +68,7 @@ def main_app():
             )
             model = st.selectbox(
                 "Response Model",
-                options=["gemini", "openai"],
+                options=["openai", "gemini"],
                 index=0,
             )
         
